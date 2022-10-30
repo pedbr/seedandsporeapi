@@ -9,3 +9,8 @@ typings/
 node_modules/
 
 src/config/secrets.ts
+
+../.DS_Store
+.DS_Store
+src/.DS_Store
+src/config/.DS_Store
