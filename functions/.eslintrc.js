@@ -21,6 +21,7 @@ module.exports = {
   },
   ignorePatterns: [
     '/lib/**/*', // Ignore built files.
+    '.eslintrc.js',
   ],
   plugins: ['@typescript-eslint', 'import'],
   rules: {
@@ -28,5 +29,6 @@ module.exports = {
     semi: ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'import/no-unresolved': 0,
+    indent: 'off',
   },
 }

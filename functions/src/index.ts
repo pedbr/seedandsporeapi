@@ -14,8 +14,8 @@ import {
   addOrder,
   getAllOrders,
   getOrderById,
-  editOrder,
-  deleteOrder,
+  confirmOrder,
+  updateOrderStatus,
 } from './controllers/ordersController'
 import { createPayment } from './controllers/paymentsController'
 
@@ -37,7 +37,7 @@ app.delete('/products/:productId', deleteProduct)
 app.post('/orders', addOrder)
 app.get('/orders', getAllOrders)
 app.get('/orders/:orderId', getOrderById)
-app.patch('/orders/:orderId', editOrder)
-app.delete('/orders/:orderId', deleteOrder)
+app.post('/orders/confirm/:orderId', confirmOrder)
+app.patch('/orders/:orderId', updateOrderStatus)
 
 exports.app = functions.https.onRequest(app)

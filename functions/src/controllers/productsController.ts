@@ -38,7 +38,10 @@ const addProduct = async (req: Request, res: Response) => {
 const getAllProducts = async (req: Request, res: Response) => {
   try {
     const allProducts: ProductType[] = []
-    const querySnapshot = await db.collection('products').get()
+    const querySnapshot = await db
+      .collection('products')
+      .orderBy('createdAt', 'desc')
+      .get()
     querySnapshot.forEach((doc: any) => allProducts.push(doc.data()))
     return res.status(200).json(allProducts)
   } catch (error: any) {
@@ -58,25 +61,14 @@ const getProductById = async (req: Request, res: Response) => {
 
 const editProduct = async (req: Request, res: Response) => {
   const {
-    body: { name, description, price, stock, weight, imageUrl },
+    body,
     params: { productId },
   } = req
 
   try {
-    const product = db.collection('products').doc(productId)
-    const currentData = (await product.get()).data() || {}
-    const productObject = {
-      id: currentData.id,
-      name: name || currentData.name,
-      description: description || currentData.description,
-      createdAt: currentData.createdAt,
-      price: price || currentData.price,
-      stock: stock || currentData.stock,
-      weight: weight || currentData.weight,
-      imageUrl: imageUrl || currentData.imageUrl,
-    }
+    const productRef = db.collection('products').doc(productId)
 
-    await product.set(productObject).catch((error) => {
+    await productRef.update(body).catch((error) => {
       return res.status(400).json({
         status: 'error',
         message: error.message,
@@ -86,7 +78,6 @@ const editProduct = async (req: Request, res: Response) => {
     return res.status(200).json({
       status: 'success',
       message: 'Product updated successfully',
-      data: productObject,
     })
   } catch (error: any) {
     return res.status(500).json(error.message)

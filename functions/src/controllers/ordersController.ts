@@ -2,41 +2,33 @@
 import { Response } from 'express'
 import { db } from '../config/firebase'
 import { OrderType } from '../types/orders'
+import { ProductType } from '../types/products'
 
 type Request = {
   body: OrderType
   params: { orderId: string }
 }
 
+const calculateTotalOrderWeight = (products: ProductType[]) => {
+  return products.reduce((acc, curr) => acc + curr.weight * curr.quantity, 0)
+}
+
 const addOrder = async (req: Request, res: Response) => {
-  const {
-    status,
-    products,
-    userId,
-    totalPrice,
-    deliveryAddress,
-    expeditedAt,
-    deliveredAt,
-    returned,
-    returnId,
-  } = req.body
+  const { products, userName, totalPrice, deliveryAddress } = req.body
   try {
     const order = db.collection('orders').doc()
     const orderObject = {
       id: order.id,
       createdAt: new Date().toISOString(),
-      status,
+      status: 'processing',
       products,
-      userId,
+      userName,
       totalPrice,
       deliveryAddress,
-      expeditedAt,
-      deliveredAt,
-      returned,
-      returnId,
+      orderWeight: calculateTotalOrderWeight(products),
     }
 
-    order.set(orderObject)
+    await order.set(orderObject)
 
     res.status(200).send({
       status: 'success',
@@ -51,7 +43,10 @@ const addOrder = async (req: Request, res: Response) => {
 const getAllOrders = async (req: Request, res: Response) => {
   try {
     const allOrders: OrderType[] = []
-    const querySnapshot = await db.collection('orders').get()
+    const querySnapshot = await db
+      .collection('orders')
+      .orderBy('createdAt', 'desc')
+      .get()
     querySnapshot.forEach((doc: any) => allOrders.push(doc.data()))
     return res.status(200).json(allOrders)
   } catch (error: any) {
@@ -69,63 +64,54 @@ const getOrderById = async (req: Request, res: Response) => {
   }
 }
 
-const editOrder = async (req: Request, res: Response) => {
+const confirmOrder = async (req: Request, res: Response) => {
   const {
-    body: {
-      status,
-      products,
-      userId,
-      totalPrice,
-      deliveryAddress,
-      expeditedAt,
-      deliveredAt,
-      returned,
-      returnId,
-    },
     params: { orderId },
   } = req
 
   try {
-    const order = db.collection('orders').doc(orderId)
-    const currentData = (await order.get()).data() || {}
-    const orderObject = {
-      id: currentData.id,
-      status: status || currentData.status,
-      products: products || currentData.products,
-      createdAt: currentData.createdAt,
-      userId: userId || currentData.userId,
-      totalPrice: totalPrice || currentData.totalPrice,
-      deliveryAddress: deliveryAddress || currentData.deliveryAddress,
-      expeditedAt: expeditedAt || currentData.expeditedAt,
-      deliveredAt: deliveredAt || currentData.deliveredAt,
-      returned: returned || currentData.returned,
-      returnId: returnId || currentData.returnId,
+    const orderRef = db.collection('orders').doc(orderId)
+
+    await orderRef.update({ status: 'pending' }).catch((error) => {
+      return res.status(400).json({
+        status: 'error',
+        message: error.message,
+      })
+    })
+
+    const orderData = (await orderRef.get()).data()
+
+    if (orderData) {
+      orderData.products.forEach(async (product: ProductType) => {
+        const productRef = db.collection('products').doc(product.id)
+        const productData = (await productRef.get()).data()
+        if (product.quantity && productData?.stock) {
+          await productRef.update({
+            stock: productData.stock - product.quantity,
+          })
+        }
+      })
     }
 
-    await order.set(orderObject).catch((error) => {
-      return res.status(400).json({
-        status: 'error',
-        message: error.message,
-      })
-    })
-
     return res.status(200).json({
       status: 'success',
-      message: 'Order updated successfully',
-      data: orderObject,
+      message: 'Order confirmed successfully',
     })
   } catch (error: any) {
     return res.status(500).json(error.message)
   }
 }
 
-const deleteOrder = async (req: Request, res: Response) => {
-  const { orderId } = req.params
+const updateOrderStatus = async (req: Request, res: Response) => {
+  const {
+    body: { status },
+    params: { orderId },
+  } = req
 
   try {
-    const order = db.collection('orders').doc(orderId)
+    const orderRef = db.collection('orders').doc(orderId)
 
-    await order.delete().catch((error) => {
+    await orderRef.update({ status }).catch((error) => {
       return res.status(400).json({
         status: 'error',
         message: error.message,
@@ -134,11 +120,11 @@ const deleteOrder = async (req: Request, res: Response) => {
 
     return res.status(200).json({
       status: 'success',
-      message: 'Order deleted successfully',
+      message: 'Order status updated successfully',
     })
   } catch (error: any) {
     return res.status(500).json(error.message)
   }
 }
 
-export { addOrder, getAllOrders, getOrderById, editOrder, deleteOrder }
+export { addOrder, getAllOrders, getOrderById, confirmOrder, updateOrderStatus }
