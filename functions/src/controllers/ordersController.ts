@@ -3,6 +3,10 @@ import { Response } from 'express'
 import { db } from '../config/firebase'
 import { OrderType } from '../types/orders'
 import { ProductType } from '../types/products'
+import * as mailClient from '@sendgrid/mail'
+import { MY_EMAIL, SENDGRID_API_KEY } from '../config/secrets'
+
+mailClient.setApiKey(SENDGRID_API_KEY)
 
 type Request = {
   body: OrderType
@@ -93,6 +97,18 @@ const confirmOrder = async (req: Request, res: Response) => {
       })
     }
 
+    await mailClient.send({
+      to: {
+        email: MY_EMAIL,
+        name: 'Pedro',
+      },
+      from: {
+        email: MY_EMAIL,
+        name: 'Seed and Spore Team',
+      },
+      templateId: 'd-22a764f68d66426cb0c2a4fafcea39c9',
+    })
+
     return res.status(200).json({
       status: 'success',
       message: 'Order confirmed successfully',
@@ -116,6 +132,34 @@ const updateOrderStatus = async (req: Request, res: Response) => {
         status: 'error',
         message: error.message,
       })
+    })
+
+    const getTemplateId = () => {
+      switch (status) {
+        case 'preparing':
+          return 'd-04970cf7742b47b59eca684a8723fb86'
+
+        case 'expedited':
+          return 'd-77006d89a5154a6ca1999d910d8159c4'
+
+        case 'delivered':
+          return 'd-b04ed41b1e8d4a149a63a918976dac74'
+
+        default:
+          return 'd-22a764f68d66426cb0c2a4fafcea39c9'
+      }
+    }
+
+    await mailClient.send({
+      to: {
+        email: MY_EMAIL,
+        name: 'Pedro',
+      },
+      from: {
+        email: MY_EMAIL,
+        name: 'Seed and Spore Team',
+      },
+      templateId: getTemplateId(),
     })
 
     return res.status(200).json({
