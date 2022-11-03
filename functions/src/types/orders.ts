@@ -14,6 +14,7 @@ export interface OrderType {
   status: Status
   products: ProductType[]
   userName: string
+  userEmail: string
   userId: string
   totalPrice: number
   orderWeight: number
