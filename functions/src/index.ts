@@ -1,7 +1,6 @@
 import * as functions from 'firebase-functions'
 import * as express from 'express'
 import * as cors from 'cors'
-import * as dotenv from 'dotenv'
 
 import {
   addProduct,
@@ -17,10 +16,9 @@ import {
   getOrderById,
   confirmOrder,
   updateOrderStatus,
+  addUserInfo,
 } from './controllers/ordersController'
 import { createPayment } from './controllers/paymentsController'
-
-dotenv.config()
 
 const app = express()
 
@@ -41,6 +39,7 @@ app.post('/orders', addOrder)
 app.get('/orders', getAllOrders)
 app.get('/orders/:orderId', getOrderById)
 app.post('/orders/confirm/:orderId', confirmOrder)
+app.patch('/orders/userInfo/:orderId', addUserInfo)
 app.patch('/orders/:orderId', updateOrderStatus)
 
 exports.app = functions.https.onRequest(app)

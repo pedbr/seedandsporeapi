@@ -70,6 +70,7 @@ const getOrderById = async (req: Request, res: Response) => {
 
 const confirmOrder = async (req: Request, res: Response) => {
   const {
+    body,
     params: { orderId },
   } = req
 
@@ -99,8 +100,8 @@ const confirmOrder = async (req: Request, res: Response) => {
 
     await mailClient.send({
       to: {
-        email: MY_EMAIL,
-        name: 'Pedro',
+        email: body.orderEmail,
+        name: orderData?.orderFullName || 'client',
       },
       from: {
         email: MY_EMAIL,
@@ -112,6 +113,31 @@ const confirmOrder = async (req: Request, res: Response) => {
     return res.status(200).json({
       status: 'success',
       message: 'Order confirmed successfully',
+    })
+  } catch (error: any) {
+    return res.status(500).json(error.message)
+  }
+}
+
+const addUserInfo = async (req: Request, res: Response) => {
+  const {
+    body,
+    params: { orderId },
+  } = req
+
+  try {
+    const orderRef = db.collection('orders').doc(orderId)
+
+    await orderRef.update(body).catch((error) => {
+      return res.status(400).json({
+        status: 'error',
+        message: error.message,
+      })
+    })
+
+    return res.status(200).json({
+      status: 'success',
+      message: 'Product updated successfully',
     })
   } catch (error: any) {
     return res.status(500).json(error.message)
@@ -150,10 +176,12 @@ const updateOrderStatus = async (req: Request, res: Response) => {
       }
     }
 
+    const orderData = (await orderRef.get()).data()
+
     await mailClient.send({
       to: {
-        email: MY_EMAIL,
-        name: 'Pedro',
+        email: orderData?.orderEmail,
+        name: orderData?.orderFullName || 'client',
       },
       from: {
         email: MY_EMAIL,
@@ -171,4 +199,11 @@ const updateOrderStatus = async (req: Request, res: Response) => {
   }
 }
 
-export { addOrder, getAllOrders, getOrderById, confirmOrder, updateOrderStatus }
+export {
+  addOrder,
+  getAllOrders,
+  getOrderById,
+  confirmOrder,
+  updateOrderStatus,
+  addUserInfo,
+}

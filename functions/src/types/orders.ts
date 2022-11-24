@@ -18,6 +18,7 @@ export interface OrderType {
   userId: string
   totalPrice: number
   orderWeight: number
+  orderEmail: string
   deliveryAddress: string
   expeditedAt: string
   deliveredAt: string

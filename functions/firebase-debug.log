@@ -1,0 +1,345 @@
+[debug] [2022-11-24T16:50:05.290Z] ----------------------------------------------------------------------
+[debug] [2022-11-24T16:50:05.291Z] Command:       /Users/pedro/.nvm/versions/node/v16.18.1/bin/node /Users/pedro/.nvm/versions/node/v16.18.1/bin/firebase emulators:start --only functions
+[debug] [2022-11-24T16:50:05.291Z] CLI Version:   11.16.1
+[debug] [2022-11-24T16:50:05.291Z] Platform:      darwin
+[debug] [2022-11-24T16:50:05.291Z] Node Version:  v16.18.1
+[debug] [2022-11-24T16:50:05.292Z] Time:          Thu Nov 24 2022 17:50:05 GMT+0100 (Central European Standard Time)
+[debug] [2022-11-24T16:50:05.292Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-24T16:50:05.329Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-24T16:50:05.329Z] > authorizing via signed-in user (pedro.c.bras@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-11-24T16:50:05.597Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-24T16:50:05.597Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2022-11-24T16:50:05.601Z] [hub] writing locator at /var/folders/22/v0pkbj6x4vj7hfc1387jlqv80000gn/T/hub-seedandsporept.json
+[debug] [2022-11-24T16:50:05.789Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-24T16:50:05.789Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-24T16:50:05.789Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-11-24T16:50:05.795Z] defaultcredentials: writing to file /Users/pedro/.config/firebase/pedro_c.bras_gmail.com_application_default_credentials.json
+[debug] [2022-11-24T16:50:05.799Z] Setting GAC to /Users/pedro/.config/firebase/pedro_c.bras_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/pedro/.config/firebase/pedro_c.bras_gmail.com_application_default_credentials.json"}}
+[debug] [2022-11-24T16:50:05.800Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/seedandsporept/adminSdkConfig [none]
+[debug] [2022-11-24T16:50:06.193Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/seedandsporept/adminSdkConfig 200
+[debug] [2022-11-24T16:50:06.194Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/seedandsporept/adminSdkConfig {"projectId":"seedandsporept","storageBucket":"seedandsporept.appspot.com","locationId":"europe-west"}
+[debug] [2022-11-24T16:50:06.230Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-11-24T16:50:06.230Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-11-24T16:50:06.230Z] Starting Emulator UI with command {"binary":"node","args":["/Users/pedro/.cache/firebase/emulators/ui-v1.11.1/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/pedro/.cache/firebase/emulators/ui-v1.11.1/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-11-24T16:50:06.320Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2022-11-24T16:50:06.320Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions\" for Cloud Functions..."}}
+[debug] [2022-11-24T16:50:06.508Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-24T16:50:07.265Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.24.1",
+    "stripe": "^10.14.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-11-24T16:50:07.265Z] Building nodejs source
+[debug] [2022-11-24T16:50:07.266Z] Analyzing nodejs backend spec
+[debug] [2022-11-24T16:50:07.268Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-24T16:50:07.371Z] Serving at port 9005
+
+[debug] [2022-11-24T16:50:07.455Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-24T16:50:07.458Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[info] ✔  functions[us-central1-app]: http function initialized (http://127.0.0.1:5001/seedandsporept/us-central1/app). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/seedandsporept/us-central1/app)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-11-24T16:50:19.403Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:50:19.403Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:50:19.403Z] Accepted request OPTIONS /seedandsporept/us-central1/app/products --> us-central1-app
+[debug] [2022-11-24T16:50:19.405Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:50:19.405Z] [functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products"}}
+[debug] [2022-11-24T16:50:19.413Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-11-24T16:50:19.414Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-11-24T16:50:19.983Z] [runtime-status] [67669] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-24T16:50:19.984Z] [runtime-status] [67669] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-24T16:50:19.984Z] [runtime-status] [67669] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-24T16:50:19.984Z] [runtime-status] [67669] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-24T16:50:20.009Z] [runtime-status] [67669] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-24T16:50:20.009Z] [runtime-status] [67669] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-11-24T16:50:20.010Z] [runtime-status] [67669] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-24T16:50:20.010Z] [runtime-status] [67669] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-24T16:50:20.010Z] [runtime-status] [67669] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-11-24T16:50:20.010Z] [runtime-status] [67669] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-24T16:50:20.077Z] [runtime-status] [67669] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"seedandsporept","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDe+gNUcv7GoYWd\nnmLTI00wC6cfn5NXIj3mkoZ8P6nnUdHPyAn3YpIjSitDOh1FP6Ya0g0afjNiiOFT\nOjiSEDPTIUv7wO6+yoEsDiAGYvy3S/wp5j9wr77x1EXAskKwgimaCi9OrVW7F1wZ\nEDZ77fZthaM91UDdaGSVrf0DXoHa7Y7CXAXBvRD4pF0W1XqR5M1Jd3nhN7IXy6mQ\naHavNL3IO+1xrEZ5eA9XgMi27aCfAUKwnREO1Zn8zuOzzTvhWxg6pv7pjvBDhgft\nkJ0CzJQQnBwtbRWNPgH/Xc3TKCIDsX9JFFBZvM4JbrhneUhhjsuQzJxhrcOYw6Mr\nsNHsXzFxAgMBAAECggEADjH7+skcY7BeRYfTEk6FyDiBsf9yfaJaLv7mjWvvKOEa\nWqBJVCTEGXeMFApT2TgBXuU+/NAKfOwqbiY/ejsKVZdh0zv35xEU0qVukAGGxbOS\ncOdt5AJoRVSGgUtH+B09QUeDNf7Ofavxys2vrkmaveO7XgEg0UenWakbObbvTOzi\nz7dEQkRNubx6dyWiyC5nvBbBY3xj82ERHZkE6FrGNUNdk3koeLIFpgGwrEt3PLWS\njSaar8BdqMLfYPGBe2JeT3iJwrv1DFudj/QaDdeXFPx4llPYOAnF+9cK6JeANbJF\nbjp0c5+wYLqbMoMlYAU6//TGqZzxzb7IKbbpv1OinQKBgQD4J5T0bDU2WyW2GY09\nFEoBQHJ5K0qoD2GY6TJYRdMCFaqewhTCg5h0pSY8uHp0nH/rlv2B+9KKUWoBuPbD\nltqNCfSDpnao/N3xW4y9Kkm0nRhFSUOVgxIroAmLMsmUKk0hDeZQQy15Cmo9VS7b\nTjx+XHcOZudmL94vrysx/Z3BzQKBgQDmBqe3JsWwD6dZzxbCbvmF8x2MGciwR9OV\n3bwftTli+M1qzDNt0bvvL0Hipbu9qZQtKed67VXG6B746IOkNvAsGHRvP/ufUgdG\nOc2iNx22wEFG7XZFb1XZzSxcyYvFiNxz69IHgfFV6+u+JMDyDumfvApqKzXTjs9m\nDJ21wuRaNQKBgQCqNMP3Li0FXlksYLQ+W6cy2phpwabQRNSFRBWy9Bl5yZCgmbAR\nhp9QCmKCrWnYh+s5lPPGbwoGszbJfatLljHLITPkBI5I9D/qpweOS+4IAuQ9ybWg\nXClfYMKLBke655TFgjohfSI4bktWTBH6e9wEM7m5WB2JOnXkMPqorDLDVQKBgQCr\nztC6NdV2OVrv84O2Whk5eWraV+/T6vIYf/OhY0SnrdoQKNFI91x9vDhjxxJBCUZJ\nrYDeCiMFXB62H0UkBHzDEsj0xz9zslsIkugKf0xMUbDv/zFVj2D6OwslisxBEIZI\ndxz6yo2tdXcxIFaU9Zp92n+U6Q1dJM+4EzhAqH7S+QKBgQDuWap2DCyQLNI/L6bc\nmkZ+yCL0czitQk7jfwWuqSAMW0Nq3G7W1HyPdvwLBynvVhqP232K2Z5HrZpAXxWX\nt5ZlcFRfh6oF9831f7MT/oAvKNWa66EspfG9+R1MaunnLrYLVWMIEFnk1bFm0x0y\n48DsLFq37uEziOViQCAg6RKw3A==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-e3bo8@seedandsporept.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}},"databaseURL":"https://seedandsporept.firebaseio.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"seedandsporept\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDe+gNUcv7GoYWd\\nnmLTI00wC6cfn5NXIj3mkoZ8P6nnUdHPyAn3YpIjSitDOh1FP6Ya0g0afjNiiOFT\\nOjiSEDPTIUv7wO6+yoEsDiAGYvy3S/wp5j9wr77x1EXAskKwgimaCi9OrVW7F1wZ\\nEDZ77fZthaM91UDdaGSVrf0DXoHa7Y7CXAXBvRD4pF0W1XqR5M1Jd3nhN7IXy6mQ\\naHavNL3IO+1xrEZ5eA9XgMi27aCfAUKwnREO1Zn8zuOzzTvhWxg6pv7pjvBDhgft\\nkJ0CzJQQnBwtbRWNPgH/Xc3TKCIDsX9JFFBZvM4JbrhneUhhjsuQzJxhrcOYw6Mr\\nsNHsXzFxAgMBAAECggEADjH7+skcY7BeRYfTEk6FyDiBsf9yfaJaLv7mjWvvKOEa\\nWqBJVCTEGXeMFApT2TgBXuU+/NAKfOwqbiY/ejsKVZdh0zv35xEU0qVukAGGxbOS\\ncOdt5AJoRVSGgUtH+B09QUeDNf7Ofavxys2vrkmaveO7XgEg0UenWakbObbvTOzi\\nz7dEQkRNubx6dyWiyC5nvBbBY3xj82ERHZkE6FrGNUNdk3koeLIFpgGwrEt3PLWS\\njSaar8BdqMLfYPGBe2JeT3iJwrv1DFudj/QaDdeXFPx4llPYOAnF+9cK6JeANbJF\\nbjp0c5+wYLqbMoMlYAU6//TGqZzxzb7IKbbpv1OinQKBgQD4J5T0bDU2WyW2GY09\\nFEoBQHJ5K0qoD2GY6TJYRdMCFaqewhTCg5h0pSY8uHp0nH/rlv2B+9KKUWoBuPbD\\nltqNCfSDpnao/N3xW4y9Kkm0nRhFSUOVgxIroAmLMsmUKk0hDeZQQy15Cmo9VS7b\\nTjx+XHcOZudmL94vrysx/Z3BzQKBgQDmBqe3JsWwD6dZzxbCbvmF8x2MGciwR9OV\\n3bwftTli+M1qzDNt0bvvL0Hipbu9qZQtKed67VXG6B746IOkNvAsGHRvP/ufUgdG\\nOc2iNx22wEFG7XZFb1XZzSxcyYvFiNxz69IHgfFV6+u+JMDyDumfvApqKzXTjs9m\\nDJ21wuRaNQKBgQCqNMP3Li0FXlksYLQ+W6cy2phpwabQRNSFRBWy9Bl5yZCgmbAR\\nhp9QCmKCrWnYh+s5lPPGbwoGszbJfatLljHLITPkBI5I9D/qpweOS+4IAuQ9ybWg\\nXClfYMKLBke655TFgjohfSI4bktWTBH6e9wEM7m5WB2JOnXkMPqorDLDVQKBgQCr\\nztC6NdV2OVrv84O2Whk5eWraV+/T6vIYf/OhY0SnrdoQKNFI91x9vDhjxxJBCUZJ\\nrYDeCiMFXB62H0UkBHzDEsj0xz9zslsIkugKf0xMUbDv/zFVj2D6OwslisxBEIZI\\ndxz6yo2tdXcxIFaU9Zp92n+U6Q1dJM+4EzhAqH7S+QKBgQDuWap2DCyQLNI/L6bc\\nmkZ+yCL0czitQk7jfwWuqSAMW0Nq3G7W1HyPdvwLBynvVhqP232K2Z5HrZpAXxWX\\nt5ZlcFRfh6oF9831f7MT/oAvKNWa66EspfG9+R1MaunnLrYLVWMIEFnk1bFm0x0y\\n48DsLFq37uEziOViQCAg6RKw3A==\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-e3bo8@seedandsporept.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}},\"databaseURL\":\"https://seedandsporept.firebaseio.com\"}"}}
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2022-11-24T16:50:20.126Z] [runtime-status] [67669] Functions runtime initialized. {"cwd":"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions","node_version":"16.18.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Functions runtime initialized. {\"cwd\":\"/Users/pedro/Documents/personal/seedandspore/seedandsporeapi/functions\",\"node_version\":\"16.18.1\"}"}}
+[debug] [2022-11-24T16:50:20.126Z] [runtime-status] [67669] Listening to port: /var/folders/22/v0pkbj6x4vj7hfc1387jlqv80000gn/T/fire_emu_1ab36b28bcd5cf66.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [67669] Listening to port: /var/folders/22/v0pkbj6x4vj7hfc1387jlqv80000gn/T/fire_emu_1ab36b28bcd5cf66.sock"}}
+[debug] [2022-11-24T16:50:20.230Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:50:20.230Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:50:20.230Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:50:20.234Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:50:20.234Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.042042ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.042042ms"}}
+[debug] [2022-11-24T16:50:20.239Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:50:20.239Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:50:20.240Z] Accepted request GET /seedandsporept/us-central1/app/products --> us-central1-app
+[debug] [2022-11-24T16:50:20.241Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:50:20.241Z] [functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products"}}
+[debug] [2022-11-24T16:50:20.241Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:50:20.241Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:50:20.817Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:50:20.817Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 573.390833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 573.390833ms"}}
+[debug] [2022-11-24T16:50:33.771Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:50:33.771Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:50:33.771Z] Accepted request OPTIONS /seedandsporept/us-central1/app/orders --> us-central1-app
+[debug] [2022-11-24T16:50:33.777Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:50:33.779Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders"}}
+[debug] [2022-11-24T16:50:33.779Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:50:33.779Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[info] i  functions: Finished "app" in 1.141417ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.141417ms"}}
+[debug] [2022-11-24T16:50:33.788Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:50:33.789Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-11-24T16:50:33.791Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:50:33.791Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:50:33.791Z] Accepted request POST /seedandsporept/us-central1/app/orders --> us-central1-app
+[debug] [2022-11-24T16:50:33.794Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:50:33.794Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders"}}
+[debug] [2022-11-24T16:50:33.794Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:50:33.795Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:50:33.974Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:50:33.974Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 168.224417ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 168.224417ms"}}
+[debug] [2022-11-24T16:50:34.016Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:50:34.016Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:50:34.016Z] Accepted request OPTIONS /seedandsporept/us-central1/app/payment --> us-central1-app
+[debug] [2022-11-24T16:50:34.021Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:50:34.021Z] [functions] Got req.url=/seedandsporept/us-central1/app/payment, mapping to path=/payment {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/payment, mapping to path=/payment"}}
+[debug] [2022-11-24T16:50:34.021Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:50:34.021Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[info] i  functions: Finished "app" in 2.094292ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 2.094292ms"}}
+[debug] [2022-11-24T16:50:34.028Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:50:34.028Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-11-24T16:50:34.029Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:50:34.029Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:50:34.029Z] Accepted request POST /seedandsporept/us-central1/app/payment --> us-central1-app
+[debug] [2022-11-24T16:50:34.036Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:50:34.037Z] [functions] Got req.url=/seedandsporept/us-central1/app/payment, mapping to path=/payment {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/payment, mapping to path=/payment"}}
+[debug] [2022-11-24T16:50:34.037Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:50:34.037Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:50:34.700Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:50:34.701Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 655.322125ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 655.322125ms"}}
+[debug] [2022-11-24T16:51:08.005Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:08.005Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:08.005Z] Accepted request OPTIONS /seedandsporept/us-central1/app/orders/userInfo/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:51:08.006Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:08.006Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/userInfo/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/userInfo/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/userInfo/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/userInfo/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:51:08.006Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:08.007Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:08.008Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:08.008Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.197166ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.197166ms"}}
+[debug] [2022-11-24T16:51:08.010Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:08.010Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:08.010Z] Accepted request PATCH /seedandsporept/us-central1/app/orders/userInfo/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:51:08.011Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:08.012Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/userInfo/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/userInfo/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/userInfo/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/userInfo/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:51:08.012Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:08.012Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:08.217Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:08.217Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 204.331333ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 204.331333ms"}}
+[debug] [2022-11-24T16:51:08.221Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:08.221Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:08.221Z] Accepted request OPTIONS /seedandsporept/us-central1/app/orders/confirm/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:51:08.223Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:08.223Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/confirm/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/confirm/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/confirm/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/confirm/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:51:08.223Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:08.223Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:08.224Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:08.224Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.307417ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.307417ms"}}
+[debug] [2022-11-24T16:51:08.225Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:08.225Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:08.225Z] Accepted request POST /seedandsporept/us-central1/app/orders/confirm/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:51:08.226Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:08.226Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/confirm/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/confirm/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/confirm/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/confirm/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:51:08.226Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:08.226Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:09.187Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:09.189Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 957.888833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 957.888833ms"}}
+[debug] [2022-11-24T16:51:23.914Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:23.914Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:23.914Z] Accepted request OPTIONS /seedandsporept/us-central1/app/products --> us-central1-app
+[debug] [2022-11-24T16:51:23.919Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:23.919Z] [functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products"}}
+[debug] [2022-11-24T16:51:23.924Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:23.924Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[info] i  functions: Finished "app" in 0.625584ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.625584ms"}}
+[debug] [2022-11-24T16:51:23.927Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:23.928Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-11-24T16:51:23.933Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:23.934Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:23.934Z] Accepted request GET /seedandsporept/us-central1/app/products --> us-central1-app
+[debug] [2022-11-24T16:51:23.937Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:23.938Z] [functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/products, mapping to path=/products"}}
+[debug] [2022-11-24T16:51:23.938Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:23.939Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:24.094Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:24.095Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 152.594792ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 152.594792ms"}}
+[debug] [2022-11-24T16:51:25.843Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:25.843Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:25.844Z] Accepted request OPTIONS /seedandsporept/us-central1/app/orders --> us-central1-app
+[debug] [2022-11-24T16:51:25.846Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:25.846Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders"}}
+[debug] [2022-11-24T16:51:25.847Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:25.847Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:25.850Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:25.850Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.976542ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.976542ms"}}
+[debug] [2022-11-24T16:51:25.854Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:25.854Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:25.854Z] Accepted request GET /seedandsporept/us-central1/app/orders --> us-central1-app
+[debug] [2022-11-24T16:51:25.858Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:25.859Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders, mapping to path=/orders"}}
+[debug] [2022-11-24T16:51:25.859Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:25.859Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:26.011Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:26.011Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 150.30875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 150.30875ms"}}
+[debug] [2022-11-24T16:51:32.724Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:32.724Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:32.724Z] Accepted request OPTIONS /seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:51:32.727Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:32.727Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:51:32.727Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:32.728Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:32.730Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:32.731Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.871ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.871ms"}}
+[debug] [2022-11-24T16:51:32.732Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:51:32.732Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:51:32.732Z] Accepted request GET /seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:51:32.735Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:51:32.737Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:51:32.737Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:51:32.737Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:51:32.979Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:51:32.979Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 236.32225ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 236.32225ms"}}
+[debug] [2022-11-24T16:52:14.838Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:52:14.839Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:52:14.839Z] Accepted request OPTIONS /seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:52:14.845Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:52:14.845Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:52:14.845Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:52:14.845Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:52:14.847Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:52:14.848Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.903334ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.903334ms"}}
+[debug] [2022-11-24T16:52:14.857Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:52:14.857Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:52:14.857Z] Accepted request PATCH /seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:52:14.859Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:52:14.859Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:52:14.859Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:52:14.859Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:52:15.525Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:52:15.525Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 661.006875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 661.006875ms"}}
+[debug] [2022-11-24T16:52:15.539Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:52:15.540Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:52:15.540Z] Accepted request GET /seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:52:15.546Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:52:15.547Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:52:15.547Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:52:15.547Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:52:15.675Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:52:15.675Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 123.02ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 123.02ms"}}
+[debug] [2022-11-24T16:56:13.727Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:56:13.744Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:56:13.744Z] Accepted request OPTIONS /seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:56:13.765Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:56:13.765Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:56:13.767Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:56:13.767Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:56:13.793Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:56:13.794Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 7.872958ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 7.872958ms"}}
+[debug] [2022-11-24T16:56:13.799Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-24T16:56:13.799Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-24T16:56:13.799Z] Accepted request GET /seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046 --> us-central1-app
+[debug] [2022-11-24T16:56:13.801Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-24T16:56:13.801Z] [functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/seedandsporept/us-central1/app/orders/9Pd4aWcID4YbJT0jR046, mapping to path=/orders/9Pd4aWcID4YbJT0jR046"}}
+[debug] [2022-11-24T16:56:13.801Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-24T16:56:13.801Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-24T16:56:13.951Z] [worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f1d92b5c-5b0e-4c11-a4fa-438aaf007893]: IDLE"}}
+[debug] [2022-11-24T16:56:13.951Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 149.007916ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 149.007916ms"}}
