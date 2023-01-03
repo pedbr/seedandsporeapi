@@ -15,7 +15,7 @@ const createPayment = async (req: PaymentRequest, res: Response) => {
   // TODO: improve handling of result and errors
   const paymentIntent = await stripe.paymentIntents.create({
     description: orderId,
-    amount: totalPrice,
+    amount: totalPrice * 100, // Multiplying by 100 since Stripe deals in cents
     currency: 'eur',
     automatic_payment_methods: {
       enabled: true,
