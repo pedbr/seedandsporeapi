@@ -77,14 +77,18 @@ const confirmOrder = async (req: Request, res: Response) => {
   try {
     const orderRef = db.collection('orders').doc(orderId)
 
+    const orderData = (await orderRef.get()).data()
+
+    if (orderData?.status !== 'processing') {
+      return
+    }
+
     await orderRef.update({ status: 'pending' }).catch((error) => {
       return res.status(400).json({
         status: 'error',
         message: error.message,
       })
     })
-
-    const orderData = (await orderRef.get()).data()
 
     if (orderData) {
       orderData.products.forEach(async (product: ProductType) => {
