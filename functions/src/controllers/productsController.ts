@@ -15,6 +15,7 @@ const addProduct = async (req: Request, res: Response) => {
     const productObject = {
       id: product.id,
       createdAt: new Date().toISOString(),
+      active: false,
       name,
       stock,
       price,
