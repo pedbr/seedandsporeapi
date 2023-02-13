@@ -1,22 +1,23 @@
-import * as functions from 'firebase-functions'
-import * as express from 'express'
 import * as cors from 'cors'
+import * as express from 'express'
+import * as functions from 'firebase-functions'
 
 import {
   addProduct,
+  deleteProduct,
+  editProduct,
   getAllProducts,
   getProductById,
-  editProduct,
-  deleteProduct,
 } from './controllers/productsController'
 
+import { sendContactEmail } from './controllers/emailsController'
 import {
   addOrder,
+  addUserInfo,
+  confirmOrder,
   getAllOrders,
   getOrderById,
-  confirmOrder,
   updateOrderStatus,
-  addUserInfo,
 } from './controllers/ordersController'
 import { createPayment } from './controllers/paymentsController'
 
@@ -41,5 +42,8 @@ app.get('/orders/:orderId', getOrderById)
 app.post('/orders/confirm/:orderId', confirmOrder)
 app.patch('/orders/userInfo/:orderId', addUserInfo)
 app.patch('/orders/:orderId', updateOrderStatus)
+
+// EMAILS
+app.post('/emails/contact', sendContactEmail)
 
 exports.app = functions.https.onRequest(app)

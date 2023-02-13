@@ -1,10 +1,10 @@
+import { ProductType } from './../types/products'
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import * as mailClient from '@sendgrid/mail'
 import { Response } from 'express'
 import { db } from '../config/firebase'
-import { OrderType } from '../types/orders'
-import { ProductType } from '../types/products'
-import * as mailClient from '@sendgrid/mail'
 import { MY_EMAIL, SENDGRID_API_KEY } from '../config/secrets'
+import { OrderType } from '../types/orders'
 
 mailClient.setApiKey(SENDGRID_API_KEY)
 
@@ -18,7 +18,7 @@ const calculateTotalOrderWeight = (products: ProductType[]) => {
 }
 
 const addOrder = async (req: Request, res: Response) => {
-  const { products, userName, totalPrice, deliveryAddress } = req.body
+  const { products, totalPrice, productsPrice, shippingCost } = req.body
   try {
     const order = db.collection('orders').doc()
     const orderObject = {
@@ -26,9 +26,9 @@ const addOrder = async (req: Request, res: Response) => {
       createdAt: new Date().toISOString(),
       status: 'processing',
       products,
-      userName,
+      productsPrice,
+      shippingCost,
       totalPrice,
-      deliveryAddress,
       orderWeight: calculateTotalOrderWeight(products),
     }
 
@@ -101,7 +101,6 @@ const confirmOrder = async (req: Request, res: Response) => {
         }
       })
     }
-
     await mailClient.send({
       to: {
         email: body.orderEmail,
@@ -109,9 +108,26 @@ const confirmOrder = async (req: Request, res: Response) => {
       },
       from: {
         email: MY_EMAIL,
-        name: 'Seed and Spore Team',
+        name: 'Wiebke - Seed and Spore Team',
       },
-      templateId: 'd-22a764f68d66426cb0c2a4fafcea39c9',
+      templateId: 'd-d7af74a0a37d4863abe875b5c1d27472',
+      dynamicTemplateData: {
+        orderId: orderData.id,
+        clientName: orderData.orderFullName,
+        createdAt: orderData.createdAt,
+        orderPrice: orderData.totalPrice,
+        productsCost: orderData.productsPrice,
+        shippingCost: orderData.shippingCost,
+        deliveryAddress: orderData.orderDeliveryAddress,
+        deliveryPostCode: orderData.orderDeliveryPostCode,
+        deliveryLocation: orderData.orderDeliveryLocation,
+        items: orderData.products.map((product: ProductType) => ({
+          productName: product.name,
+          price: product.price,
+          quantity: product.quantity,
+          totalPrice: product.price * product.quantity,
+        })),
+      },
     })
 
     return res.status(200).json({
@@ -164,35 +180,25 @@ const updateOrderStatus = async (req: Request, res: Response) => {
       })
     })
 
-    const getTemplateId = () => {
-      switch (status) {
-        case 'preparing':
-          return 'd-04970cf7742b47b59eca684a8723fb86'
-
-        case 'expedited':
-          return 'd-77006d89a5154a6ca1999d910d8159c4'
-
-        case 'delivered':
-          return 'd-b04ed41b1e8d4a149a63a918976dac74'
-
-        default:
-          return 'd-22a764f68d66426cb0c2a4fafcea39c9'
-      }
-    }
-
     const orderData = (await orderRef.get()).data()
 
-    await mailClient.send({
-      to: {
-        email: orderData?.orderEmail,
-        name: orderData?.orderFullName || 'client',
-      },
-      from: {
-        email: MY_EMAIL,
-        name: 'Seed and Spore Team',
-      },
-      templateId: getTemplateId(),
-    })
+    if (status === 'expedited' && orderData) {
+      await mailClient.send({
+        to: {
+          email: orderData.orderEmail,
+          name: orderData.orderFullName || 'Client',
+        },
+        from: {
+          email: MY_EMAIL,
+          name: 'Seed and Spore Team',
+        },
+        dynamicTemplateData: {
+          orderId: orderData.id,
+          clientName: orderData.orderFullName || 'Client',
+        },
+        templateId: 'd-71be446831f644d1a3a39ddac63bc3f8',
+      })
+    }
 
     return res.status(200).json({
       status: 'success',

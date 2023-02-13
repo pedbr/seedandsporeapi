@@ -13,13 +13,16 @@ export interface OrderType {
   createdAt: string
   status: Status
   products: ProductType[]
-  userName: string
-  userEmail: string
+  orderFullName: string
   userId: string
+  productsPrice: number
+  shippingCost: number
   totalPrice: number
   orderWeight: number
   orderEmail: string
-  deliveryAddress: string
+  orderDeliveryAddress: string
+  orderDeliveryLocation: string
+  orderDeliveryPostCode: string
   expeditedAt: string
   deliveredAt: string
   returned: boolean
