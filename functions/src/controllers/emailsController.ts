@@ -27,6 +27,7 @@ const sendContactEmail = async (req: ContactEmailRequest, res: Response) => {
       status: 'success',
       message: 'Email sent successfully',
     })
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     res.status(500).json({ status: 'error', message: error.message })
   }
