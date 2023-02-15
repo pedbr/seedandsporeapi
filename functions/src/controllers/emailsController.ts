@@ -10,19 +10,24 @@ interface ContactEmailRequest {
 
 const sendContactEmail = async (req: ContactEmailRequest, res: Response) => {
   const { from, name, message } = req.body
-
   try {
     await mailClient.send({
       to: {
-        email: 'pedro.c.bras@gmail.com',
+        email: MY_EMAIL,
         name: 'Seed and Spore Contact Form',
       },
       from: {
         email: MY_EMAIL,
-        name,
+        name: name,
       },
-      text: `From: ${from} - ${message}`,
+      dynamicTemplateData: {
+        clientName: name,
+        clientEmail: from,
+        message,
+      },
+      templateId: 'd-ff93293216f140069be5b688593219bc',
     })
+
     res.status(200).send({
       status: 'success',
       message: 'Email sent successfully',
