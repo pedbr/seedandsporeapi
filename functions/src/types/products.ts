@@ -12,6 +12,7 @@ export interface ProductType {
   imageUrl: string
   description: TranslationString
   weight: number
+  discount?: number
   categoryId?: string
   campaignId?: string
   quantity: number

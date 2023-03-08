@@ -9,7 +9,8 @@ type Request = {
 }
 
 const addProduct = async (req: Request, res: Response) => {
-  const { name, description, price, stock, weight, imageUrl } = req.body
+  const { name, description, price, stock, weight, imageUrl, discount } =
+    req.body
   try {
     const product = db.collection('products').doc()
     const productObject = {
@@ -22,6 +23,7 @@ const addProduct = async (req: Request, res: Response) => {
       imageUrl,
       description,
       weight,
+      discount,
     }
 
     product.set(productObject)
