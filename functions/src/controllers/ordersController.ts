@@ -118,6 +118,7 @@ const confirmOrder = async (req: Request, res: Response) => {
         orderPrice: orderData.totalPrice,
         productsCost: orderData.productsPrice,
         shippingCost: orderData.shippingCost,
+        shippingType: orderData.shippingType,
         deliveryAddress: orderData.orderDeliveryAddress,
         deliveryPostCode: orderData.orderDeliveryPostCode,
         deliveryLocation: orderData.orderDeliveryLocation,
